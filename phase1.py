@@ -20,7 +20,9 @@ import sys
 
 
 
-# def 
+if len(sys.argv) < 2:
+    print("Please insert a valid path to MIPS file") 
+    exit(0)
 
 pathToFile = sys.argv[1]
 
@@ -55,7 +57,7 @@ REs = {
     r"div.s": "Divide Single (floating-point)",
     r"lui": "Load Upper Immediate",  
     r"^\$": "register",
-    r"[a-z-A-Z]+\w*":"identifier"
+    r"^[a-zA-Z]\w*":"identifier"
 }
 
 
